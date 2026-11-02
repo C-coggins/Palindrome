@@ -9,14 +9,18 @@ where the characters read the same forwards or backwards
 
 
 def validate_type(string):
-    if type(string) != str:
-        raise ValueError("The input is not a string")
+    try:
+        if type(string) != str:
+            raise ValueError("The input is not a string")
+    except ValueError:
+        print("The input is not a string")
 
+    return string
 
 def main():
 
     string = "a"
-    validate_type(0)
+    string = validate_type(0)
 
 if __name__ == '__main__':
         main()
