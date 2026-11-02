@@ -5,7 +5,7 @@ Chris Coggins
 this program with take an input string and verify whether the characters creat a palindrome;
 where the characters read the same forwards or backwards
 '''
-
+from collections import deque
 
 
 def validate_type(string):
@@ -17,10 +17,17 @@ def validate_type(string):
 
     return string
 
+def is_palindrome(string):
+    string_deque = deque(string)
+
+    return string
+
 def main():
 
-    string = "a"
-    string = validate_type(0)
+    string = ''
+    string = validate_type(string)
+    string_deque = is_palindrome(string)
+    print(string_deque)
 
 if __name__ == '__main__':
         main()
