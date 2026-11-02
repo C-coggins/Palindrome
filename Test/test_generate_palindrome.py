@@ -10,3 +10,6 @@ def test_validate_input():
 
 def test_returns_f_empty():
     assert is_palindrome('') == False
+
+def test_returns_t_a():
+    assert is_palindrome('a') == True

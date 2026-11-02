@@ -21,6 +21,7 @@ def is_palindrome(string):
     string_deque = deque(string)
     if not string_deque:
         return False
+    
     return string
 
 def main():
