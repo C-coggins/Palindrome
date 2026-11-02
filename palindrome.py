@@ -19,12 +19,13 @@ def validate_type(string):
 
 def is_palindrome(string):
     string_deque = deque(string)
-
+    if not string_deque:
+        return False
     return string
 
 def main():
 
-    string = ''
+    string = 'a'
     string = validate_type(string)
     string_deque = is_palindrome(string)
     print(string_deque)
