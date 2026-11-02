@@ -9,7 +9,7 @@ where the characters read the same forwards or backwards
 
 
 def validate_type():
-
+    pass
 
 
 
