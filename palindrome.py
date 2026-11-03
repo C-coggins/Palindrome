@@ -19,7 +19,7 @@ def validate_type(string):
 
 # verify whether the input string is a palindrome
 def is_palindrome(string):
-    string_deque = deque(string)                            # copy input string to a deque
+    string_deque = deque(string.lower())                    # copy input string (lower case conversion) to a deque
     if not string_deque:                                    # if deque is empty
         return False                                        # return false
     if len(string_deque) == 1:                              # if deque contains only 1 character
@@ -35,7 +35,7 @@ def is_palindrome(string):
 
 def main():
 
-    string = 'Laval'                                           # input string instantiation
+    string = 'Toronto'                                           # input string instantiation
     string = validate_type(string)                          # validaate string type function call
     palindrome_boolean = is_palindrome(string)                    # verify palindrome function call
 
