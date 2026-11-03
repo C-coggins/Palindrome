@@ -24,13 +24,25 @@ def is_palindrome(string):
         return False                                        # return false
     if len(string_deque) == 1:                              # if deque contains only 1 character
         return True                                         # return true
+    if len(string_deque) > 1:                               # if deque contains 2 or more character
+        while len(string_deque) > 1:                        # Loop through characters
+            char_start = string_deque.popleft()             # pop the first character
+            char_end = string_deque.pop()                   # pop the last character
+            if char_start != char_end:                      # Are the characters the same
+                return False                                # if no return false
+        return True                                         # return true
+
 
 def main():
 
-    string = 'bb'                                           # input string instantiation
+    string = 'Laval'                                           # input string instantiation
     string = validate_type(string)                          # validaate string type function call
-    string_deque = is_palindrome(string)                    # verify palindrome function call
-    print(string_deque)                                     # print return value of is_palindrome
+    palindrome_boolean = is_palindrome(string)                    # verify palindrome function call
 
+    # print the appropriate message based on the result from is_palindrome function
+    if palindrome_boolean:
+        print(f'{string} is {palindrome_boolean} palindrome' )     # print if true                               # print return value of is_palindrome
+    else:
+        print(f'{string} is not a palindrome')                     # print if false
 if __name__ == '__main__':
         main()
